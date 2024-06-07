@@ -1,0 +1,38 @@
+.catalogWrapper {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.normalizeWrapper {
+  max-width: 1480px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 13px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1500px) {
+  .normalizeWrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1500px) {
+  .normalizeWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .normalizeWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .normalizeWrapper {
+    grid-template-columns: 1fr;
+  }
+}
